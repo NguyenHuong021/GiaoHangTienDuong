@@ -82,7 +82,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelAccountInfo.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
 
         jLabelAccountInfo.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelAccountInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/info.png"))); // NOI18N
@@ -106,7 +106,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
 
         jLabelOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/cart.png"))); // NOI18N
@@ -130,7 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelAllOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelAllOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelAllOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
 
         jLabelAllOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelAllOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/description.png"))); // NOI18N
@@ -154,7 +154,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelLogout.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
 
         jLabelLogout.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/logout.png"))); // NOI18N
