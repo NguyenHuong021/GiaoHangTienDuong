@@ -1,5 +1,8 @@
 package com.ghtd.main;
 
+import com.ghtd.gui.DangNhapDialog;
+import javax.swing.*;
+
 /**
  *
  * @author Asus
@@ -7,7 +10,10 @@ package com.ghtd.main;
 public class Main {
     
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        DangNhapDialog h = new DangNhapDialog();
+        h.setContentPane(h.panelMain);
+        h.setSize(300, 400);
+        h.setVisible(true);
+        h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    
 }
