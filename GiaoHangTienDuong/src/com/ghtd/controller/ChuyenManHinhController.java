@@ -103,8 +103,8 @@ public class ChuyenManHinhController {
         @Override
         public void mouseExited(MouseEvent e) {
             if(!kindSelected.equalsIgnoreCase(kind)){
-                jpnItem.setBackground(new Color (173, 56, 56));
-                jlbItem.setBackground(new Color (173, 56, 56));
+                jpnItem.setBackground(new Color (255, 102, 102));
+                jlbItem.setBackground(new Color (255, 102, 102));
             }
         }
         
@@ -116,8 +116,8 @@ public class ChuyenManHinhController {
                 item.getJpn().setBackground(new Color (173, 56, 56));
                 item.getJlb().setBackground(new Color (173, 56, 56));
             } else {
-                item.getJpn().setBackground(new Color (255,102,102));
-                item.getJlb().setBackground(new Color (255,102,102));
+                item.getJpn().setBackground(new Color (255, 102, 102));
+                item.getJlb().setBackground(new Color (255, 102, 102));
             }
         }
     }
