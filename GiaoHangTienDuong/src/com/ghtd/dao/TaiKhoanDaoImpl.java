@@ -8,14 +8,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class TaiKhoanDaoImpl implements TaiKhoanDao{
-    private static String DB_URL = "jdbc:mysql://localhost:3306/testdb";
+    private static String DB_URL = "jdbc:mysql://localhost:3306/giaohangtienduong";
     private static String USER_NAME = "root";
-    private static String PASSWORD = "1234567890";
+    private static String PASSWORD = "123456";
     @Override
     public TaiKhoan login(String account, String password){
-
         Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
-        String sql = "SELECT * FROM tai_khoan WHERE ten_dang_nhap LIKE ? AND mat_khau LIKE ?";
+        String sql = "SELECT * FROM TAIKHOAN WHERE account LIKE ? AND password LIKE ?";
         TaiKhoan taiKhoan = null;
         try{
             PreparedStatement ps = (PreparedStatement) conn.prepareStatement(sql);
@@ -26,18 +25,19 @@ public class TaiKhoanDaoImpl implements TaiKhoanDao{
                 taiKhoan = new TaiKhoan();
                 taiKhoan.setAccount(rs.getString("account"));
                 taiKhoan.setPassword(rs.getString("password"));
+                System.out.println(taiKhoan.getAccount());
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        return null;
+        return taiKhoan;
     }
 
     public static Connection getConnection(String dbURL, String userName,
                                            String password) {
         Connection conn = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(dbURL, userName, password);
             System.out.println("connect successfully!");
         } catch (Exception ex) {
