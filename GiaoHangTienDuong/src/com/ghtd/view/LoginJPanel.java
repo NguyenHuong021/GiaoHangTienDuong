@@ -20,6 +20,7 @@ public class LoginJPanel extends javax.swing.JFrame {
         DangNhapController controller = new DangNhapController(this, btnSubmit, jtfTenDangNhap,
                                                                 jtfMatKhau, jLabel1);
         controller.setEvent();
+
     }
 
     /**
