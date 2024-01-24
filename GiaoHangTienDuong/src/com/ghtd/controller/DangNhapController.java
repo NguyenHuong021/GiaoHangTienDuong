@@ -9,7 +9,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class DangNhapController {
-    private Dialog dialog;
+    private JFrame dialog;
     private JButton btnSubmit;
     private JTextField jtfTenDangNhap;
     private JTextField jtfMatKhau;
@@ -17,7 +17,7 @@ public class DangNhapController {
 
     private TaiKhoanService taiKhoanService = null;
 
-    public DangNhapController(Dialog dialog, JButton btnSubmit,
+    public DangNhapController(JFrame dialog, JButton btnSubmit,
                               JTextField jtfTenDangNhap, JTextField jtfMatKhau, JLabel jlbMsg) {
         this.dialog = dialog;
         this.btnSubmit = btnSubmit;
