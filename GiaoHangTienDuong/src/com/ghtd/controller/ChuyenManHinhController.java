@@ -44,7 +44,8 @@ public class ChuyenManHinhController {
             item.getJlb().addMouseListener(new LabelEvent(item.getKind(), item.getJpn(), item.getJlb()));
         }
     }
-    
+
+    // LabelEvent là sự kiện tác động lên các nút của mình.
     class LabelEvent implements MouseListener {
         
         private JPanel node;
