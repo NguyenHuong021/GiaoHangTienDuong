@@ -13,7 +13,7 @@ public class DBConnect {
     // Tự sửa connection string theo CSDL lưu ở máy
     public static String URL = "jdbc:mysql://localhost:3306/giaohangtienduong";
     public static String DB_USERNAME = "root"; 
-    public static String DB_PASSWORD = "123456789";
+    public static String DB_PASSWORD = "123456";
     
     public static Connection getConnection() {
         Connection cons = null;
