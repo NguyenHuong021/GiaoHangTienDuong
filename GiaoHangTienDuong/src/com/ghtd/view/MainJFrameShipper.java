@@ -8,12 +8,12 @@ import java.util.List;
  *
  * @author Asus
  */
-public class MainJFrame extends javax.swing.JFrame {
+public class MainJFrameShipper extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
-    public MainJFrame() {
+    public MainJFrameShipper() {
         initComponents();
         
         setTitle("HỆ THỐNG HỖ TRỢ GIAO HÀNG TIỆN ĐƯỜNG");
@@ -82,7 +82,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelAccountInfo.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
+        jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
         jLabelAccountInfo.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelAccountInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/info.png"))); // NOI18N
@@ -106,7 +106,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
+        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
         jLabelOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/cart.png"))); // NOI18N
@@ -130,7 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelAllOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelAllOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
+        jPanelAllOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
         jLabelAllOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelAllOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/description.png"))); // NOI18N
@@ -154,7 +154,7 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         jPanelLogout.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), null));
+        jPanelLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
         jLabelLogout.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/logout.png"))); // NOI18N
@@ -206,7 +206,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(jPanelAllOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 31, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanelView.setBackground(new java.awt.Color(173, 56, 56));
@@ -215,11 +215,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanelView.setLayout(jPanelViewLayout);
         jPanelViewLayout.setHorizontalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 956, Short.MAX_VALUE)
+            .addGap(0, 950, Short.MAX_VALUE)
         );
         jPanelViewLayout.setVerticalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 670, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanelAllLayout = new javax.swing.GroupLayout(jPanelAll);
@@ -229,7 +229,8 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(jPanelAllLayout.createSequentialGroup()
                 .addComponent(jPanelOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanelView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanelAllLayout.setVerticalGroup(
             jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
