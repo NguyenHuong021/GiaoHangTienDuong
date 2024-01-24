@@ -1,8 +1,11 @@
 package com.ghtd.controller;
 
+import com.ghtd.main.Main;
 import com.ghtd.model.TaiKhoan;
 import com.ghtd.service.TaiKhoanService;
 import com.ghtd.service.TaiKhoanServiceImpl;
+import com.ghtd.view.LoginJPanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -39,8 +42,13 @@ public class DangNhapController {
                         TaiKhoan taiKhoan = taiKhoanService.login(jtfTenDangNhap.getText(), jtfMatKhau.getText());
                         if (taiKhoan == null) {
                             jlbMsg.setText("Tên đăng nhập và mật khẩu không đúng!");
+                        } else{
+                            // Gọi hàm để thông báo cho Main rằng đăng nhập đã thành công :
+                            notifyLoginSuccess();
                         }
                     }
+                    // Đóng cửa sổ đăng nhập
+                    //this.dispose();
                 } catch (Exception ex) {
                     jlbMsg.setText(ex.toString());
                 }
@@ -55,5 +63,9 @@ public class DangNhapController {
                 btnSubmit.setBackground(new Color(100, 221, 23));
             }
         });
+    }
+    private void notifyLoginSuccess() {
+        // Gọi phương thức static trong Main để thông báo đăng nhập thành công
+        Main.handleLoginSuccess();
     }
 }
