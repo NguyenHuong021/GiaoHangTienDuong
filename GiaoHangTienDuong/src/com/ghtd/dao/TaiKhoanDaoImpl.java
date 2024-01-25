@@ -25,6 +25,8 @@ public class TaiKhoanDaoImpl implements TaiKhoanDao{
                 taiKhoan = new TaiKhoan();
                 taiKhoan.setAccount(rs.getString("account"));
                 taiKhoan.setPassword(rs.getString("password"));
+                taiKhoan.setLoaiND(rs.getString("loaiND"));
+                taiKhoan.setMaND(rs.getInt("maND"));
                 System.out.println(taiKhoan.getAccount());
             }
         }catch (Exception e){

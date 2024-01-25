@@ -1,5 +1,6 @@
 package com.ghtd.controller;
 
+import com.ghtd.common.TaiKhoanSingleton;
 import com.ghtd.main.Main;
 import com.ghtd.model.TaiKhoan;
 import com.ghtd.service.TaiKhoanService;
@@ -44,6 +45,8 @@ public class DangNhapController {
                             jlbMsg.setText("Tên đăng nhập và mật khẩu không đúng!");
                         } else{
                             // Gọi hàm để thông báo cho Main rằng đăng nhập đã thành công :
+                            TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
+                            System.out.println(taiKhoan.getMaND());
                             notifyLoginSuccess();
                         }
                     }
