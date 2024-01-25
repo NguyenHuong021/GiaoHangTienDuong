@@ -6,6 +6,7 @@ import com.ghtd.model.TaiKhoan;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DonHangDaoImpl implements DonHangDao{
@@ -13,6 +14,8 @@ public class DonHangDaoImpl implements DonHangDao{
     public List<DonHang> getList(TaiKhoan taiKhoan){
         Connection cons = DBConnect.getConnection();
         String sql = "SELECT * FROM DONHANG WHERE maKH = ?";
+        List<DonHang> list = new ArrayList<>();
+        //System.out.println(taiKhoan.getMaND());
         try{
             PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);
             ps.setInt(1, taiKhoan.getMaND());
@@ -25,12 +28,14 @@ public class DonHangDaoImpl implements DonHangDao{
                 donHang.setTenSP(rs.getString("tenSP"));
                 donHang.setPhiVanChuyen(rs.getInt("phiVanChuyen"));
                 donHang.setTrangThaiGuiNhan(rs.getString("trangThaiGuiNhan"));
+                list.add(donHang);
+                System.out.println(donHang);
             }
             ps.close();
             cons.close();
         }catch (Exception e){
             e.printStackTrace();
         }
-        return null;
+        return list;
     }
 }

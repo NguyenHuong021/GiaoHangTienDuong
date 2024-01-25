@@ -1,5 +1,7 @@
 package com.ghtd.view;
 
+import com.ghtd.controller.DonHangController;
+
 /**
  *
  * @author Asus
@@ -11,6 +13,8 @@ public class AllOrderJPanel extends javax.swing.JPanel {
      */
     public AllOrderJPanel() {
         initComponents();
+        DonHangController controller = new DonHangController(jPanel1, jButton2, jTextField1);
+        controller.setDataToTable();
     }
 
     /**
@@ -63,7 +67,7 @@ public class AllOrderJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(560, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
