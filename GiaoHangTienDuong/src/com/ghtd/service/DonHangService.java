@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface DonHangService {
     public List<DonHang> getList(TaiKhoan taiKhoan);
+
+    public DonHang addDonHang(DonHang donHang);
 }

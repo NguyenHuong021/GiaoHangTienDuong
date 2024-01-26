@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class TaiKhoanDaoImpl implements TaiKhoanDao{
     private static String DB_URL = "jdbc:mysql://localhost:3306/giaohangtienduong";
     private static String USER_NAME = "root";
-    private static String PASSWORD = "123456789";
+    private static String PASSWORD = "123456";
     @Override
     public TaiKhoan login(String account, String password){
         Connection conn = getConnection(DB_URL, USER_NAME, PASSWORD);
