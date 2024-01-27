@@ -17,4 +17,7 @@ public class DonHangServiceImpl implements DonHangService{
     public List<DonHang> getList(TaiKhoan taiKhoan) {
         return donHangDao.getList(taiKhoan);
     }
+
+    @Override
+    public DonHang addDonHang(DonHang donHang){ return donHangDao.addDonHang(donHang);}
 }
