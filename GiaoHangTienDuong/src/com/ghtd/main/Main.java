@@ -8,13 +8,13 @@ import static com.ghtd.dao.DBConnect.getConnection;
 // * @author Asus
 // */
 public class Main {
-    
+    public static LoginJPanel loginJPanel = new LoginJPanel();
+            
     public static void main(String[] args) {
         getConnection();
         System.out.println("Running main frame");
         //new MainJFrame().setVisible(true);
         //new LoginJPanel().setVisible(true);
-        LoginJPanel loginJPanel = new LoginJPanel();
         loginJPanel.setVisible(true);
     }
 
@@ -24,6 +24,7 @@ public class Main {
         //LoginJPanel loginJPanel = new LoginJPanel();
         //loginJPanel.setVisible(false);
         MainJFrame mainFrame = new MainJFrame();
+        loginJPanel.setVisible(false);
         mainFrame.setVisible(true);
     }
 }
