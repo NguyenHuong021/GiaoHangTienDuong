@@ -56,7 +56,6 @@ public class LoginJPanel extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(956, 670));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
@@ -76,7 +75,7 @@ public class LoginJPanel extends javax.swing.JFrame {
             }
         });
 
-        btnSubmit.setBackground(new java.awt.Color(255, 51, 51));
+        btnSubmit.setBackground(new java.awt.Color(0, 200, 83));
         btnSubmit.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         btnSubmit.setText("Login");
 

@@ -29,7 +29,6 @@ create table if not exists KHACHHANG(
     CCCD int not null,
     diaChiGuiHang varchar(255) not null,
     ngayThangNamSinh date not null,
-    yeuCauDacBiet varchar(255),
     primary key(maKH)
 ) engine=InnoDB default charset=utf8;
 
@@ -81,6 +80,7 @@ create table if not exists DONHANG(
     phiVanChuyen int,
     tienCOD int,
     trangThaiGuiNhan varchar(20) not null,
+	yeuCauDacBiet varchar(255),
     maKH int,
     maNN int,
     maNV int,
