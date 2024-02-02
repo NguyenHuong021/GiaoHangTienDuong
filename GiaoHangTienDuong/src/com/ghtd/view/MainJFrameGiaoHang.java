@@ -19,9 +19,9 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
         setTitle("HỆ THỐNG HỖ TRỢ GIAO HÀNG TIỆN ĐƯỜNG");
         
         List<DanhMucBean> listItem = new ArrayList<>();
-        listItem.add(new DanhMucBean("AccountInfo", jPanelAccountInfo, jLabelAccountInfo));
-        listItem.add(new DanhMucBean("Order", jPanelGetOrder, jLabelGetOrder));
-        listItem.add(new DanhMucBean("AllOrder", jPanelAllOrder, jLabelAllOrder));
+        listItem.add(new DanhMucBean("AccountInfoGiaoHang", jPanelAccountInfo, jLabelAccountInfo));
+        listItem.add(new DanhMucBean("GetOrderGiaoHang", jPanelGetOrder, jLabelGetOrder));
+        listItem.add(new DanhMucBean("AllOrderGiaoHang", jPanelAllOrder, jLabelAllOrder));
         
         ChuyenManHinhControllerGiaoHang controller = new ChuyenManHinhControllerGiaoHang(jPanelView);
         controller.setView(jPanelAccountInfo, jLabelAccountInfo);

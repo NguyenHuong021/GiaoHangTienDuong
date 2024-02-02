@@ -1,9 +1,9 @@
 package com.ghtd.controller;
 
 import com.ghtd.bean.DanhMucBean;
-import com.ghtd.view.AccountInfoJPanel;
-import com.ghtd.view.AllOrderJPanel;
-import com.ghtd.view.OrderJPanel;
+import com.ghtd.view.AccountInfoJPanelGiaoHang;
+import com.ghtd.view.AllOrderJPanelGiaoHang;
+import com.ghtd.view.GetOrderJPanelGiaoHang;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -27,13 +27,13 @@ public class ChuyenManHinhControllerGiaoHang {
     }
     
     public void setView(JPanel jpnItem, JLabel jlbItem) {
-        kindSelected = "AccountInfo";
+        kindSelected = "AccountInfoGiaoHang";
         jpnItem.setBackground(new Color (173, 56, 56));
         jlbItem.setBackground(new Color (173, 56, 56));
         
         root.removeAll();
         root.setLayout(new BorderLayout());
-        root.add(new AccountInfoJPanel());
+        root.add(new AccountInfoJPanelGiaoHang());
         root.validate();
         root.repaint();
     }
@@ -63,14 +63,14 @@ public class ChuyenManHinhControllerGiaoHang {
         @Override
         public void mouseClicked(MouseEvent e) {
             switch(kind) {
-                case "AccountInfo":
-                    node = new AccountInfoJPanel();
+                case "AccountInfoGiaoHang":
+                    node = new AccountInfoJPanelGiaoHang();
                     break;
-                case "Order":
-                    node = new OrderJPanel();
+                case "GetOrderGiao":
+                    node = new GetOrderJPanelGiaoHang();
                     break;
-                case "AllOrder":
-                    node = new AllOrderJPanel();
+                case "AllOrderGiaoHang":
+                    node = new AllOrderJPanelGiaoHang();
                     break;    
                 default:
                     break;
