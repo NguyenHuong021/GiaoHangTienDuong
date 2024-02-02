@@ -8,12 +8,12 @@ import java.util.List;
  *
  * @author Asus
  */
-public class MainJFrameManager extends javax.swing.JFrame {
+public class MainJFrameQTV extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
-    public MainJFrameManager() {
+    public MainJFrameQTV() {
         initComponents();
         
         setTitle("HỆ THỐNG HỖ TRỢ GIAO HÀNG TIỆN ĐƯỜNG");
@@ -47,8 +47,7 @@ public class MainJFrameManager extends javax.swing.JFrame {
         jLabelOrder = new javax.swing.JLabel();
         jPanelAllOrder = new javax.swing.JPanel();
         jLabelAllOrder = new javax.swing.JLabel();
-        jPanelLogout = new javax.swing.JPanel();
-        jLabelLogout = new javax.swing.JLabel();
+        jButtonLogOut = new javax.swing.JButton();
         jPanelView = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,6 +82,7 @@ public class MainJFrameManager extends javax.swing.JFrame {
 
         jPanelAccountInfo.setBackground(new java.awt.Color(255, 102, 102));
         jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelAccountInfo.setFocusTraversalPolicyProvider(true);
 
         jLabelAccountInfo.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelAccountInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/info.png"))); // NOI18N
@@ -110,16 +110,16 @@ public class MainJFrameManager extends javax.swing.JFrame {
 
         jLabelOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jLabelOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/cart.png"))); // NOI18N
-        jLabelOrder.setText("SỬA XOÁ NHÂN VIÊN");
+        jLabelOrder.setText("QUẢN LÝ NHÂN VIÊN");
 
         javax.swing.GroupLayout jPanelOrderLayout = new javax.swing.GroupLayout(jPanelOrder);
         jPanelOrder.setLayout(jPanelOrderLayout);
         jPanelOrderLayout.setHorizontalGroup(
             jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOrderLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanelOrderLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
                 .addComponent(jLabelOrder)
-                .addGap(51, 51, 51))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelOrderLayout.setVerticalGroup(
             jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,29 +153,11 @@ public class MainJFrameManager extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
         );
 
-        jPanelLogout.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
-
-        jLabelLogout.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabelLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/logout.png"))); // NOI18N
-        jLabelLogout.setText("ĐĂNG XUẤT");
-
-        javax.swing.GroupLayout jPanelLogoutLayout = new javax.swing.GroupLayout(jPanelLogout);
-        jPanelLogout.setLayout(jPanelLogoutLayout);
-        jPanelLogoutLayout.setHorizontalGroup(
-            jPanelLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelLogoutLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabelLogout)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-        jPanelLogoutLayout.setVerticalGroup(
-            jPanelLogoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelLogoutLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabelLogout)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        jButtonLogOut.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonLogOut.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jButtonLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/logout.png"))); // NOI18N
+        jButtonLogOut.setText("ĐĂNG XUẤT");
+        jButtonLogOut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
 
         javax.swing.GroupLayout jPanelOptionsLayout = new javax.swing.GroupLayout(jPanelOptions);
         jPanelOptions.setLayout(jPanelOptionsLayout);
@@ -189,10 +171,10 @@ public class MainJFrameManager extends javax.swing.JFrame {
                     .addComponent(jPanelOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelAllOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(jPanelOptionsLayout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jPanelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOptionsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
         );
         jPanelOptionsLayout.setVerticalGroup(
             jPanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,9 +186,9 @@ public class MainJFrameManager extends javax.swing.JFrame {
                 .addComponent(jPanelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelAllOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         jPanelView.setBackground(new java.awt.Color(173, 56, 56));
@@ -215,7 +197,7 @@ public class MainJFrameManager extends javax.swing.JFrame {
         jPanelView.setLayout(jPanelViewLayout);
         jPanelViewLayout.setHorizontalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 968, Short.MAX_VALUE)
+            .addGap(0, 956, Short.MAX_VALUE)
         );
         jPanelViewLayout.setVerticalGroup(
             jPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,19 +231,19 @@ public class MainJFrameManager extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonLogOut;
     private javax.swing.JLabel jLabelAccountInfo;
     private javax.swing.JLabel jLabelAllOrder;
     private javax.swing.JLabel jLabelHome;
-    private javax.swing.JLabel jLabelLogout;
     private javax.swing.JLabel jLabelOrder;
     private javax.swing.JPanel jPanelAccountInfo;
     private javax.swing.JPanel jPanelAll;
     private javax.swing.JPanel jPanelAllOrder;
     private javax.swing.JPanel jPanelHome;
-    private javax.swing.JPanel jPanelLogout;
     private javax.swing.JPanel jPanelOptions;
     private javax.swing.JPanel jPanelOrder;
     private javax.swing.JPanel jPanelView;

@@ -1,7 +1,7 @@
 package com.ghtd.main;
 
 import com.ghtd.view.LoginJPanel;
-import com.ghtd.view.MainJFrame;
+import com.ghtd.view.MainJFrameKhachHang;
 import static com.ghtd.dao.DBConnect.getConnection;
 
 // *
@@ -23,7 +23,7 @@ public class Main {
         // Hiển thị MainJFrame sau khi đăng nhập thành công
         //LoginJPanel loginJPanel = new LoginJPanel();
         //loginJPanel.setVisible(false);
-        MainJFrame mainFrame = new MainJFrame();
+        MainJFrameKhachHang mainFrame = new MainJFrameKhachHang();
         loginJPanel.setVisible(false);
         mainFrame.setVisible(true);
     }
