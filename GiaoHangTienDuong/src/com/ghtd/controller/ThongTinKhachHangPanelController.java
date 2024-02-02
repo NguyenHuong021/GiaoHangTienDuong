@@ -1,7 +1,10 @@
 package com.ghtd.controller;
 
 import com.ghtd.common.TaiKhoanSingleton;
+import com.ghtd.model.KhachHang;
 import com.ghtd.model.TaiKhoan;
+import com.ghtd.service.NguoiDungService;
+import com.ghtd.service.NguoiDungServiceImpl;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -9,18 +12,51 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.time.format.DateTimeFormatter;
 import javax.swing.*;
 
 
 public class ThongTinKhachHangPanelController {
     private JButton editButton;
     private JButton deleteButton;
-    
-    public ThongTinKhachHangPanelController(JButton editButton, JButton deleteButton) {
+    private JTextField maKhachHang;
+    private JTextField ngaySinh;
+    private JTextField soDienThoai;
+    private JTextField tenKhachHang;
+    private JTextField CCCD;
+    private JTextField diaChiGuiHang;
+    private NguoiDungService nguoiDungService = null;
+    public ThongTinKhachHangPanelController(JButton editButton, JButton deleteButton,
+                                            JTextField maKhachHang, JTextField ngaySinh,
+                                            JTextField soDienThoai, JTextField tenKhachHang,
+                                            JTextField CCCD, JTextField diaChiGuiHang) {
         this.editButton = editButton;
         this.deleteButton = deleteButton;
+        this.nguoiDungService = new NguoiDungServiceImpl();
     }
-    
+    public void thongTinKhachHang(JTextField maKhachHang, JTextField ngaySinh,
+                                  JTextField soDienThoai, JTextField tenKhachHang,
+                                  JTextField CCCD, JTextField diaChiGuiHang){
+        TaiKhoan taiKhoan = TaiKhoanSingleton.getInstance().getTaiKhoan();
+        KhachHang khachHang = (KhachHang) nguoiDungService.thonTinNguoiDung(taiKhoan);
+        maKhachHang.setText(String.valueOf(khachHang.getMaKH()));
+        maKhachHang.setEditable(false);
+
+        ngaySinh.setText(khachHang.getNgayThangNamSinh().toString());
+        ngaySinh.setEditable(false);
+
+        soDienThoai.setText(String.valueOf(khachHang.getSDT()));
+        soDienThoai.setEditable(false);
+
+        tenKhachHang.setText(khachHang.getTenKH());
+        tenKhachHang.setEditable(false);
+
+        CCCD.setText(String.valueOf(khachHang.getCCCD()));
+        CCCD.setEditable(false);
+
+        diaChiGuiHang.setText(khachHang.getDiaChiGuiHang());
+        diaChiGuiHang.setEditable(false);
+    }
     public void popUpEditer(JButton editButton) {
         TaiKhoan taiKhoan = TaiKhoanSingleton.getInstance().getTaiKhoan();
         editButton.addMouseListener(new MouseAdapter(){
