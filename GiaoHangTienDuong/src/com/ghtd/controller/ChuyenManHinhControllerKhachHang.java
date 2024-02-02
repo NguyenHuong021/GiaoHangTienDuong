@@ -15,14 +15,14 @@ import java.util.List;
  *
  * @author Asus
  */
-public class ChuyenManHinhController {
+public class ChuyenManHinhControllerKhachHang {
     
     private JPanel root;
     private String kindSelected = "";
     
     private List<DanhMucBean> listItem = null;
 
-    public ChuyenManHinhController(JPanel jpnRoot) {
+    public ChuyenManHinhControllerKhachHang(JPanel jpnRoot) {
         this.root = jpnRoot;
     }
     

@@ -1,7 +1,7 @@
 package com.ghtd.view;
 
 import com.ghtd.bean.DanhMucBean;
-import com.ghtd.controller.ChuyenManHinhController;
+import com.ghtd.controller.ChuyenManHinhControllerKhachHang;
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -23,7 +23,7 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         listItem.add(new DanhMucBean("Order", jPanelOrder, jLabelOrder));
         listItem.add(new DanhMucBean("AllOrder", jPanelAllOrder, jLabelAllOrder));
         
-        ChuyenManHinhController controller = new ChuyenManHinhController(jPanelView);
+        ChuyenManHinhControllerKhachHang controller = new ChuyenManHinhControllerKhachHang(jPanelView);
         controller.setView(jPanelAccountInfo, jLabelAccountInfo);
         controller.setEvent(listItem);
     }

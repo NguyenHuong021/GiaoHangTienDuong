@@ -13,7 +13,7 @@ import java.awt.event.MouseEvent;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class AddDonHangController {
+public class AddDonHangControllerKhachHang {
     private javax.swing.JTextField canNang;
     private javax.swing.JButton datDonButton;
     private javax.swing.JTextField diaChiGui;
@@ -27,10 +27,10 @@ public class AddDonHangController {
 
     private DonHangService donHangService = null;
     private NguoiNhanService nguoiNhanService = null;
-    public AddDonHangController() {
+    public AddDonHangControllerKhachHang() {
     }
 
-    public AddDonHangController(JTextField canNang, JButton datDonButton, JTextField diaChiGui, JTextField diaChiNhan,
+    public AddDonHangControllerKhachHang(JTextField canNang, JButton datDonButton, JTextField diaChiGui, JTextField diaChiNhan,
                                 JTextField giaTien, JTextField loaiSanPham, JTextField tenSanPham,
                                 JTextField CCCD, JTextField tenNguoiNhan, JTextField soDienThoai) {
         this.canNang = canNang;                 // ex7

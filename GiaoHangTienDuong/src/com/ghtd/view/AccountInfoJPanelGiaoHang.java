@@ -1,6 +1,6 @@
 package com.ghtd.view;
 
-import com.ghtd.controller.ThongTinKhachHangPanelController;
+import com.ghtd.controller.ThongTinNhanVienPanelController;
 /**
  *
  * @author Asus
@@ -13,7 +13,7 @@ public class AccountInfoJPanelGiaoHang extends javax.swing.JPanel {
     public AccountInfoJPanelGiaoHang() {
         initComponents();
         
-        ThongTinKhachHangPanelController editorController = new ThongTinKhachHangPanelController(editButton, deleteButton);
+        ThongTinNhanVienPanelController editorController = new ThongTinNhanVienPanelController(editButton, deleteButton);
         editorController.popUpEditer(editButton);
         editorController.deleteAccountConfirm(deleteButton);
         
