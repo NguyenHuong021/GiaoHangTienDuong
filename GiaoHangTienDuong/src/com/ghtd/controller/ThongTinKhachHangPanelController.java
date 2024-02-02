@@ -1,5 +1,8 @@
 package com.ghtd.controller;
 
+import com.ghtd.common.TaiKhoanSingleton;
+import com.ghtd.model.TaiKhoan;
+
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -19,6 +22,7 @@ public class ThongTinKhachHangPanelController {
     }
     
     public void popUpEditer(JButton editButton) {
+        TaiKhoan taiKhoan = TaiKhoanSingleton.getInstance().getTaiKhoan();
         editButton.addMouseListener(new MouseAdapter(){
             @Override
             public void mouseClicked(MouseEvent e) {
