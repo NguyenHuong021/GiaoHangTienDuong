@@ -127,6 +127,5 @@ create table if not exists TAIKHOAN(
 	account varchar(50) unique not null,
     password varchar(50) not null,
     maND int not null,
-    loaiND varchar(20) not null,
-    primary key(maND)
+    loaiND varchar(20) not null
 ) engine=InnoDB default charset=utf8;
