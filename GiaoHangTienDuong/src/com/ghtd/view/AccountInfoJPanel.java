@@ -16,7 +16,7 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
         ThongTinKhachHangPanelController editorController = new ThongTinKhachHangPanelController(editButton, deleteButton,
                 maKhachHang, ngaySinh, soDienThoai, tenKhachHang, CCCD, diaChiGuiHang);
         editorController.thongTinKhachHang(maKhachHang, ngaySinh, soDienThoai, tenKhachHang, CCCD, diaChiGuiHang);
-        editorController.popUpEditer(editButton);
+        editorController.popUpEditer(editButton, maKhachHang, ngaySinh, soDienThoai, tenKhachHang, CCCD, diaChiGuiHang);
         editorController.deleteAccountConfirm(deleteButton);
         
     }

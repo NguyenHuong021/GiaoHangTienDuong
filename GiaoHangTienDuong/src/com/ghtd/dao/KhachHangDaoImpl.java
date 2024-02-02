@@ -43,6 +43,7 @@ public class KhachHangDaoImpl implements KhachHangDao{
             ps.setInt(6, khachHang.getMaKH());
             int affectedRows = ps.executeUpdate();
             if (affectedRows > 0) {
+                System.out.println("ma khách hàng : " + khachHang.getMaKH());
                 System.out.println("Đã update khách hàng thành công!");
             } else {
                 System.out.println("update dữ liệu khác hàng không thành công!");

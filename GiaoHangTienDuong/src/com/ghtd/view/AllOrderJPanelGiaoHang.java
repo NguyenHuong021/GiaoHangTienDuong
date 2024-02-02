@@ -1,5 +1,7 @@
 package com.ghtd.view;
 
+import com.ghtd.controller.DonHangChuaNhanController;
+
 /**
  *
  * @author Asus
@@ -11,7 +13,6 @@ public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
      */
     public AllOrderJPanelGiaoHang() {
         initComponents();
-        
     }
 
     /**

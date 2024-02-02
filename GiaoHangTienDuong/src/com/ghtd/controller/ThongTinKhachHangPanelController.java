@@ -68,7 +68,10 @@ public class ThongTinKhachHangPanelController {
         diaChiGuiHang.setText(khachHang.getDiaChiGuiHang());
         diaChiGuiHang.setEditable(false);
     }
-    public void popUpEditer(JButton editButton) {
+    public void popUpEditer(JButton editButton,
+                            JTextField maKhachHang, JTextField ngaySinh,
+                            JTextField soDienThoai, JTextField tenKhachHang,
+                            JTextField CCCD, JTextField diaChiGuiHang) {
         TaiKhoan taiKhoan = TaiKhoanSingleton.getInstance().getTaiKhoan();
         editButton.addMouseListener(new MouseAdapter(){
             @Override
@@ -158,12 +161,31 @@ public class ThongTinKhachHangPanelController {
                 int result = JOptionPane.showConfirmDialog(null, popupEdit, "Nhập thông tin mới", JOptionPane.OK_CANCEL_OPTION);
                 if(result == JOptionPane.OK_OPTION){
                     KhachHang khachHang = new KhachHang();
+                    khachHang.setMaKH(taiKhoan.getMaND());
                     khachHang.setTenKH(tenField.getText());
                     khachHang.setSDT(Integer.parseInt(sdtField.getText()));
                     khachHang.setCCCD(Integer.parseInt(cccdField.getText()));
-                    khachHang.setDiaChiGuiHang(diaChiGuiHang.getText());
+                    khachHang.setDiaChiGuiHang(diaChiGuiHangField.getText());
                     khachHang.setNgayThangNamSinh(Date.valueOf(ngaySinhField.getText()));
                     khachHangService.updateKhachHang(khachHang);
+                    //thongTinKhachHang(khachHang.);
+                    maKhachHang.setText(String.valueOf(khachHang.getMaKH()));
+                    maKhachHang.setEditable(false);
+
+                    ngaySinh.setText(khachHang.getNgayThangNamSinh().toString());
+                    ngaySinh.setEditable(false);
+
+                    soDienThoai.setText(String.valueOf(khachHang.getSDT()));
+                    soDienThoai.setEditable(false);
+
+                    tenKhachHang.setText(khachHang.getTenKH());
+                    tenKhachHang.setEditable(false);
+
+                    CCCD.setText(String.valueOf(khachHang.getCCCD()));
+                    CCCD.setEditable(false);
+
+                    diaChiGuiHang.setText(khachHang.getDiaChiGuiHang());
+                    diaChiGuiHang.setEditable(false);
                 }
             }
         });
