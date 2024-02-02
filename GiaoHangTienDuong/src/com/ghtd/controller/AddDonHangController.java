@@ -1,6 +1,8 @@
 package com.ghtd.controller;
 
 import com.ghtd.model.DonHang;
+import com.ghtd.service.DonHangService;
+import com.ghtd.service.DonHangServiceImpl;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -17,6 +19,7 @@ public class AddDonHangController {
     private javax.swing.JTextField loaiSanPham;
     private javax.swing.JTextField tenSanPham;
 
+    private DonHangService donHangService = null;
     public AddDonHangController() {
     }
 
@@ -28,6 +31,7 @@ public class AddDonHangController {
         this.giaTien = giaTien;
         this.loaiSanPham = loaiSanPham;         // ex5
         this.tenSanPham = tenSanPham;           // ex6
+        this.donHangService = new DonHangServiceImpl();
         // ngay nhan, ngay giao, tien COD, trang thai gui nhan, maKH.
     }
 
@@ -42,7 +46,14 @@ public class AddDonHangController {
                 donHang.setTrangThaiGuiNhan("Chờ xác nhận");
                 donHang.setMaKH(1);
                 //write code here :
-
+                donHang.setCanNang(Float.parseFloat(canNang.getText()));
+                donHang.setDiaChiGui(diaChiGui.getText());
+                donHang.setDiaChiNhan(diaChiNhan.getText());
+                donHang.setPhiVanChuyen(Integer.parseInt(giaTien.getText()));
+                donHang.setLoaiHang(loaiSanPham.getText());
+                donHang.setTenSP(tenSanPham.getText());
+                donHangService.addDonHang(donHang);
+                //write load jpanel view here :
 
             }
         });
