@@ -1,6 +1,6 @@
 package com.ghtd.view;
 
-import com.ghtd.controller.AddDonHangController;
+import com.ghtd.controller.AddDonHangControllerKhachHang;
 
 /**
  *

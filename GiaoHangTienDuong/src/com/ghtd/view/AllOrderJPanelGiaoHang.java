@@ -1,6 +1,6 @@
 package com.ghtd.view;
 
-import com.ghtd.controller.DonHangController;
+import com.ghtd.controller.DonHangControllerKhachHang;
 
 /**
  *
@@ -13,8 +13,7 @@ public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
      */
     public AllOrderJPanelGiaoHang() {
         initComponents();
-        DonHangController controller = new DonHangController(jPanel1, jButton2, jTextField1);
-        controller.setDataToTable();
+        
     }
 
     /**
@@ -30,7 +29,10 @@ public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
 
+        setPreferredSize(new java.awt.Dimension(956, 670));
+
         jPanel1.setBackground(new java.awt.Color(240, 240, 240));
+        jPanel1.setPreferredSize(new java.awt.Dimension(956, 670));
 
         jButton2.setBackground(new java.awt.Color(76, 175, 60));
         jButton2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -56,7 +58,7 @@ public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 407, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(99, 99, 99))
         );
@@ -67,17 +69,14 @@ public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(545, Short.MAX_VALUE))
+                .addContainerGap(604, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(38, 38, 38))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

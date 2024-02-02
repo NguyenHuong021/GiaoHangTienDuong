@@ -66,7 +66,7 @@ public class ChuyenManHinhControllerGiaoHang {
                 case "AccountInfoGiaoHang":
                     node = new AccountInfoJPanelGiaoHang();
                     break;
-                case "GetOrderGiao":
+                case "GetOrderGiaoHang":
                     node = new GetOrderJPanelGiaoHang();
                     break;
                 case "AllOrderGiaoHang":

@@ -16,7 +16,7 @@ import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.util.List;
 
-public class DonHangController {
+public class DonHangControllerKhachHang {
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
@@ -30,9 +30,9 @@ public class DonHangController {
 
     private TableRowSorter<TableModel> rowSorter = null;
 
-    public DonHangController(){};
+    public DonHangControllerKhachHang(){};
 
-    public DonHangController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+    public DonHangControllerKhachHang(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;

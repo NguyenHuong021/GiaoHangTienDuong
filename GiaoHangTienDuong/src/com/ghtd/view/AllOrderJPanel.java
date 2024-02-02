@@ -1,6 +1,6 @@
 package com.ghtd.view;
 
-import com.ghtd.controller.DonHangController;
+import com.ghtd.controller.DonHangControllerKhachHang;
 
 /**
  *
@@ -13,7 +13,7 @@ public class AllOrderJPanel extends javax.swing.JPanel {
      */
     public AllOrderJPanel() {
         initComponents();
-        DonHangController controller = new DonHangController(jPanel1, jButton2, jTextField1);
+        DonHangControllerKhachHang controller = new DonHangControllerKhachHang(jPanel1, jButton2, jTextField1);
         controller.setDataToTable();
     }
 
