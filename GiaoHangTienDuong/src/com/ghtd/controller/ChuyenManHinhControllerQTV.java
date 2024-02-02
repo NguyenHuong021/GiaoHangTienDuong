@@ -1,9 +1,9 @@
 package com.ghtd.controller;
 
 import com.ghtd.bean.DanhMucBean;
-import com.ghtd.view.AccountInfoJPanelGiaoHang;
-import com.ghtd.view.AllOrderJPanelGiaoHang;
-import com.ghtd.view.GetOrderJPanelGiaoHang;
+import com.ghtd.view.AccountEditKhachHangJPanelQTV;
+import com.ghtd.view.AccountEditNhanVienJPanelQTV;
+import com.ghtd.view.AllOrderJPanelQTV;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -15,25 +15,25 @@ import java.util.List;
  *
  * @author Asus
  */
-public class ChuyenManHinhControllerGiaoHang {
+public class ChuyenManHinhControllerQTV {
     
     private JPanel root;
     private String kindSelected = "";
     
     private List<DanhMucBean> listItem = null;
 
-    public ChuyenManHinhControllerGiaoHang(JPanel jpnRoot) {
+    public ChuyenManHinhControllerQTV(JPanel jpnRoot) {
         this.root = jpnRoot;
     }
     
     public void setView(JPanel jpnItem, JLabel jlbItem) {
-        kindSelected = "GetOrderGiaoHang";
+        kindSelected = "AllOrderQTV";
         jpnItem.setBackground(new Color (173, 56, 56));
         jlbItem.setBackground(new Color (173, 56, 56));
         
         root.removeAll();
         root.setLayout(new BorderLayout());
-        root.add(new GetOrderJPanelGiaoHang());
+        root.add(new AllOrderJPanelQTV());
         root.validate();
         root.repaint();
     }
@@ -63,14 +63,14 @@ public class ChuyenManHinhControllerGiaoHang {
         @Override
         public void mouseClicked(MouseEvent e) {
             switch(kind) {
-                case "AccountInfoGiaoHang":
-                    node = new AccountInfoJPanelGiaoHang();
+                case "AccountEditKhachHang":
+                    node = new AccountEditKhachHangJPanelQTV();
                     break;
-                case "GetOrderGiaoHang":
-                    node = new GetOrderJPanelGiaoHang();
+                case "AccountEditNhanVien":
+                    node = new AccountEditNhanVienJPanelQTV();
                     break;
-                case "AllOrderGiaoHang":
-                    node = new AllOrderJPanelGiaoHang();
+                case "AllOrderQTV":
+                    node = new AllOrderJPanelQTV();
                     break;    
                 default:
                     break;

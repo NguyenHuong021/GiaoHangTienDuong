@@ -1,7 +1,7 @@
 package com.ghtd.view;
 
 import com.ghtd.bean.DanhMucBean;
-import com.ghtd.controller.ChuyenManHinhControllerKhachHang;
+import com.ghtd.controller.ChuyenManHinhControllerQTV;
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -19,12 +19,12 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         setTitle("HỆ THỐNG HỖ TRỢ GIAO HÀNG TIỆN ĐƯỜNG");
         
         List<DanhMucBean> listItem = new ArrayList<>();
-        listItem.add(new DanhMucBean("AccountInfo", jPanelAccountInfo, jLabelAccountInfo));
-        listItem.add(new DanhMucBean("Order", jPanelOrder, jLabelOrder));
-        listItem.add(new DanhMucBean("AllOrder", jPanelAllOrder, jLabelAllOrder));
+        listItem.add(new DanhMucBean("AccountEditKhachHang", jPanelQuanLyKhachHang, jLabelQuanLyKhachHang));
+        listItem.add(new DanhMucBean("AccountEditNhanVien", jPanelQuanLyNhanVien, jLabelQuanLyNhanVien));
+        listItem.add(new DanhMucBean("AllOrderQTV", jPanelAllOrder, jLabelAllOrder));
         
-        ChuyenManHinhControllerKhachHang controller = new ChuyenManHinhControllerKhachHang(jPanelView);
-        controller.setView(jPanelAccountInfo, jLabelAccountInfo);
+        ChuyenManHinhControllerQTV controller = new ChuyenManHinhControllerQTV(jPanelView);
+        controller.setView(jPanelAllOrder, jLabelAllOrder);
         controller.setEvent(listItem);
     }
 
@@ -41,13 +41,13 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         jPanelOptions = new javax.swing.JPanel();
         jPanelHome = new javax.swing.JPanel();
         jLabelHome = new javax.swing.JLabel();
-        jPanelAccountInfo = new javax.swing.JPanel();
-        jLabelAccountInfo = new javax.swing.JLabel();
-        jPanelOrder = new javax.swing.JPanel();
-        jLabelOrder = new javax.swing.JLabel();
+        jPanelQuanLyKhachHang = new javax.swing.JPanel();
+        jLabelQuanLyKhachHang = new javax.swing.JLabel();
         jPanelAllOrder = new javax.swing.JPanel();
         jLabelAllOrder = new javax.swing.JLabel();
         jButtonLogOut = new javax.swing.JButton();
+        jPanelQuanLyNhanVien = new javax.swing.JPanel();
+        jLabelQuanLyNhanVien = new javax.swing.JLabel();
         jPanelView = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,6 +55,7 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         jPanelAll.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanelOptions.setBackground(new java.awt.Color(117, 184, 85));
+        jPanelOptions.setPreferredSize(new java.awt.Dimension(384, 649));
 
         jPanelHome.setBackground(new java.awt.Color(21, 114, 65));
 
@@ -68,7 +69,7 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         jPanelHomeLayout.setHorizontalGroup(
             jPanelHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHomeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jLabelHome)
                 .addGap(20, 20, 20))
         );
@@ -80,52 +81,27 @@ public class MainJFrameQTV extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
-        jPanelAccountInfo.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelAccountInfo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
-        jPanelAccountInfo.setFocusTraversalPolicyProvider(true);
+        jPanelQuanLyKhachHang.setBackground(new java.awt.Color(255, 102, 102));
+        jPanelQuanLyKhachHang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
-        jLabelAccountInfo.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabelAccountInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/info.png"))); // NOI18N
-        jLabelAccountInfo.setText("THÔNG TIN TÀI KHOẢN");
+        jLabelQuanLyKhachHang.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabelQuanLyKhachHang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/manageaccount.png"))); // NOI18N
+        jLabelQuanLyKhachHang.setText("QUẢN LÝ KHÁCH HÀNG");
 
-        javax.swing.GroupLayout jPanelAccountInfoLayout = new javax.swing.GroupLayout(jPanelAccountInfo);
-        jPanelAccountInfo.setLayout(jPanelAccountInfoLayout);
-        jPanelAccountInfoLayout.setHorizontalGroup(
-            jPanelAccountInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAccountInfoLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabelAccountInfo)
-                .addGap(45, 45, 45))
+        javax.swing.GroupLayout jPanelQuanLyKhachHangLayout = new javax.swing.GroupLayout(jPanelQuanLyKhachHang);
+        jPanelQuanLyKhachHang.setLayout(jPanelQuanLyKhachHangLayout);
+        jPanelQuanLyKhachHangLayout.setHorizontalGroup(
+            jPanelQuanLyKhachHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelQuanLyKhachHangLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelQuanLyKhachHang)
+                .addGap(40, 40, 40))
         );
-        jPanelAccountInfoLayout.setVerticalGroup(
-            jPanelAccountInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAccountInfoLayout.createSequentialGroup()
+        jPanelQuanLyKhachHangLayout.setVerticalGroup(
+            jPanelQuanLyKhachHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelQuanLyKhachHangLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabelAccountInfo)
-                .addGap(30, 30, 30))
-        );
-
-        jPanelOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
-
-        jLabelOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabelOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/cart.png"))); // NOI18N
-        jLabelOrder.setText("QUẢN LÝ NHÂN VIÊN");
-
-        javax.swing.GroupLayout jPanelOrderLayout = new javax.swing.GroupLayout(jPanelOrder);
-        jPanelOrder.setLayout(jPanelOrderLayout);
-        jPanelOrderLayout.setHorizontalGroup(
-            jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOrderLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabelOrder)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelOrderLayout.setVerticalGroup(
-            jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOrderLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabelOrder)
+                .addComponent(jLabelQuanLyKhachHang)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -147,10 +123,10 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         );
         jPanelAllOrderLayout.setVerticalGroup(
             jPanelAllOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAllOrderLayout.createSequentialGroup()
+            .addGroup(jPanelAllOrderLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabelAllOrder)
-                .addGap(30, 30, 30))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jButtonLogOut.setBackground(new java.awt.Color(255, 102, 102));
@@ -158,6 +134,30 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         jButtonLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/logout.png"))); // NOI18N
         jButtonLogOut.setText("ĐĂNG XUẤT");
         jButtonLogOut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+
+        jPanelQuanLyNhanVien.setBackground(new java.awt.Color(255, 102, 102));
+        jPanelQuanLyNhanVien.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+
+        jLabelQuanLyNhanVien.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabelQuanLyNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/manageaccount.png"))); // NOI18N
+        jLabelQuanLyNhanVien.setText("QUẢN LÝ NHÂN VIÊN");
+
+        javax.swing.GroupLayout jPanelQuanLyNhanVienLayout = new javax.swing.GroupLayout(jPanelQuanLyNhanVien);
+        jPanelQuanLyNhanVien.setLayout(jPanelQuanLyNhanVienLayout);
+        jPanelQuanLyNhanVienLayout.setHorizontalGroup(
+            jPanelQuanLyNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelQuanLyNhanVienLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabelQuanLyNhanVien)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelQuanLyNhanVienLayout.setVerticalGroup(
+            jPanelQuanLyNhanVienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelQuanLyNhanVienLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabelQuanLyNhanVien)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanelOptionsLayout = new javax.swing.GroupLayout(jPanelOptions);
         jPanelOptions.setLayout(jPanelOptionsLayout);
@@ -167,28 +167,28 @@ public class MainJFrameQTV extends javax.swing.JFrame {
             .addGroup(jPanelOptionsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelAccountInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelAllOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelQuanLyKhachHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelAllOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelQuanLyNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOptionsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanelOptionsLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
                 .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelOptionsLayout.setVerticalGroup(
             jPanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOptionsLayout.createSequentialGroup()
                 .addComponent(jPanelHome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelAccountInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelQuanLyKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelQuanLyNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelAllOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(25, 25, 25))
         );
 
         jPanelView.setBackground(new java.awt.Color(173, 56, 56));
@@ -215,7 +215,7 @@ public class MainJFrameQTV extends javax.swing.JFrame {
         );
         jPanelAllLayout.setVerticalGroup(
             jPanelAllLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
             .addComponent(jPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -236,16 +236,16 @@ public class MainJFrameQTV extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogOut;
-    private javax.swing.JLabel jLabelAccountInfo;
     private javax.swing.JLabel jLabelAllOrder;
     private javax.swing.JLabel jLabelHome;
-    private javax.swing.JLabel jLabelOrder;
-    private javax.swing.JPanel jPanelAccountInfo;
+    private javax.swing.JLabel jLabelQuanLyKhachHang;
+    private javax.swing.JLabel jLabelQuanLyNhanVien;
     private javax.swing.JPanel jPanelAll;
     private javax.swing.JPanel jPanelAllOrder;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelOptions;
-    private javax.swing.JPanel jPanelOrder;
+    private javax.swing.JPanel jPanelQuanLyKhachHang;
+    private javax.swing.JPanel jPanelQuanLyNhanVien;
     private javax.swing.JPanel jPanelView;
     // End of variables declaration//GEN-END:variables
 }
