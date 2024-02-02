@@ -34,7 +34,7 @@ public class NguoiDungDaoImpl implements NguoiDungDao{
             return khachHang;
         }
         if(taiKhoan.getLoaiND().equals("GH")){
-
+            return taiKhoan;
         }
         return taiKhoan;
     }

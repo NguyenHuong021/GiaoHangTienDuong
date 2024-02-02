@@ -13,7 +13,9 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
     public AccountInfoJPanel() {
         initComponents();
         
-        ThongTinKhachHangPanelController editorController = new ThongTinKhachHangPanelController(editButton, deleteButton);
+        ThongTinKhachHangPanelController editorController = new ThongTinKhachHangPanelController(editButton, deleteButton,
+                maKhachHang, ngaySinh, soDienThoai, tenKhachHang, CCCD, diaChiGuiHang);
+        editorController.thongTinKhachHang(maKhachHang, ngaySinh, soDienThoai, tenKhachHang, CCCD, diaChiGuiHang);
         editorController.popUpEditer(editButton);
         editorController.deleteAccountConfirm(deleteButton);
         
@@ -32,17 +34,17 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
         deleteButton = new javax.swing.JButton();
         editButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        maKhachHang = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        tenKhachHang = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        ngaySinh = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        CCCD = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        soDienThoai = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        diaChiGuiHang = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -70,66 +72,66 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel1.setText("Mã Khách hàng");
 
-        jTextField1.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField1.setText("maKH01");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        maKhachHang.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        maKhachHang.setText("maKH01");
+        maKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                maKhachHangActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel2.setText("Tên Khách hàng");
 
-        jTextField2.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField2.setText("maKH01");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tenKhachHang.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        tenKhachHang.setText("maKH01");
+        tenKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tenKhachHangActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel3.setText("Ngày sinh");
 
-        jTextField3.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField3.setText("maKH01");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        ngaySinh.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        ngaySinh.setText("maKH01");
+        ngaySinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                ngaySinhActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel4.setText("CCCD");
 
-        jTextField4.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField4.setText("maKH01");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        CCCD.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        CCCD.setText("maKH01");
+        CCCD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                CCCDActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel5.setText("Số điện thoại");
 
-        jTextField5.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField5.setText("maKH01");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        soDienThoai.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        soDienThoai.setText("maKH01");
+        soDienThoai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                soDienThoaiActionPerformed(evt);
             }
         });
 
         jLabel6.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         jLabel6.setText("Địa chỉ gửi hàng");
 
-        jTextField6.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
-        jTextField6.setText("maKH01");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        diaChiGuiHang.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
+        diaChiGuiHang.setText("maKH01");
+        diaChiGuiHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                diaChiGuiHangActionPerformed(evt);
             }
         });
 
@@ -157,34 +159,33 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(215, 215, 215)
-                        .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(110, 110, 110))
+                        .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel6)
                             .addGap(30, 30, 30)
-                            .addComponent(jTextField6))
+                            .addComponent(diaChiGuiHang))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(soDienThoai, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel4)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel3)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ngaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel2)
                             .addGap(30, 30, 30)
-                            .addComponent(jTextField2))
+                            .addComponent(tenKhachHang))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addComponent(maKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,19 +195,19 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(maKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tenKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ngaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
                         .addComponent(jLabel7)
@@ -215,11 +216,11 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(soDienThoai, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(diaChiGuiHang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(78, 78, 78)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,7 +236,7 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -247,33 +248,35 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_editButtonActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void maKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maKhachHangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_maKhachHangActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tenKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenKhachHangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tenKhachHangActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void ngaySinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ngaySinhActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_ngaySinhActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void CCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCCDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_CCCDActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void soDienThoaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soDienThoaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_soDienThoaiActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void diaChiGuiHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diaChiGuiHangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_diaChiGuiHangActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CCCD;
     private javax.swing.JButton deleteButton;
+    private javax.swing.JTextField diaChiGuiHang;
     private javax.swing.JButton editButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -284,11 +287,9 @@ public class AccountInfoJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField maKhachHang;
+    private javax.swing.JTextField ngaySinh;
+    private javax.swing.JTextField soDienThoai;
+    private javax.swing.JTextField tenKhachHang;
     // End of variables declaration//GEN-END:variables
 }
