@@ -92,7 +92,7 @@ public class DonHangDaoImpl implements DonHangDao{
                 "    ?,\n" +
                 "    ?,\n" +
                 "    ?,\n" +
-                "    ?,\n" +
+                "    ?\n" +
                 ")";
         try{
             PreparedStatement ps = (PreparedStatement) cons.prepareStatement(sql);

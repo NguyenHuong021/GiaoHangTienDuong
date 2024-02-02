@@ -70,9 +70,9 @@
                                           <Component id="lbTenSP" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="tenSanPham1" min="-2" pref="222" max="-2" attributes="0"/>
+                                              <Component id="tenNguoiNhan" min="-2" pref="222" max="-2" attributes="0"/>
                                               <Component id="tenSanPham" min="-2" pref="222" max="-2" attributes="0"/>
-                                              <Component id="tenSanPham2" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
+                                              <Component id="soDienThoai" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -105,7 +105,7 @@
                                       <Component id="lbYeuCauDacBiet2" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="tenSanPham3" min="-2" pref="222" max="-2" attributes="0"/>
+                                  <Component id="CCCD" min="-2" pref="222" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
@@ -157,14 +157,14 @@
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbYeuCauDacBiet1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tenSanPham1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="tenNguoiNhan" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="lbYeuCauDacBiet3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tenSanPham3" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="CCCD" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lbYeuCauDacBiet2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tenSanPham2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="soDienThoai" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="68" max="32767" attributes="0"/>
                   <Component id="datDonButton" min="-2" max="-2" attributes="0"/>
@@ -288,9 +288,9 @@
             <Property name="text" type="java.lang.String" value="T&#xea;n ng&#x1b0;&#x1edd;i nh&#x1ead;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tenSanPham1">
+        <Component class="javax.swing.JTextField" name="tenNguoiNhan">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tenSanPham1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tenNguoiNhanActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbYeuCauDacBiet2">
@@ -301,9 +301,9 @@
             <Property name="text" type="java.lang.String" value="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tenSanPham2">
+        <Component class="javax.swing.JTextField" name="soDienThoai">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tenSanPham2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="soDienThoaiActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbYeuCauDacBiet3">
@@ -314,9 +314,9 @@
             <Property name="text" type="java.lang.String" value="CCCD ng&#x1b0;&#x1edd;i nh&#x1ead;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tenSanPham3">
+        <Component class="javax.swing.JTextField" name="CCCD">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tenSanPham3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CCCDActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPaneText">

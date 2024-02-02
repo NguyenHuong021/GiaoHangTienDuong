@@ -1,8 +1,11 @@
 package com.ghtd.controller;
 
 import com.ghtd.model.DonHang;
+import com.ghtd.model.NguoiNhan;
 import com.ghtd.service.DonHangService;
 import com.ghtd.service.DonHangServiceImpl;
+import com.ghtd.service.NguoiNhanService;
+import com.ghtd.service.NguoiNhanServiceImpl;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -18,12 +21,18 @@ public class AddDonHangController {
     private javax.swing.JTextField giaTien;
     private javax.swing.JTextField loaiSanPham;
     private javax.swing.JTextField tenSanPham;
+    private javax.swing.JTextField CCCD;
+    private javax.swing.JTextField tenNguoiNhan;
+    private javax.swing.JTextField soDienThoai;
 
     private DonHangService donHangService = null;
+    private NguoiNhanService nguoiNhanService = null;
     public AddDonHangController() {
     }
 
-    public AddDonHangController(JTextField canNang, JButton datDonButton, JTextField diaChiGui, JTextField diaChiNhan, JTextField giaTien, JTextField loaiSanPham, JTextField tenSanPham) {
+    public AddDonHangController(JTextField canNang, JButton datDonButton, JTextField diaChiGui, JTextField diaChiNhan,
+                                JTextField giaTien, JTextField loaiSanPham, JTextField tenSanPham,
+                                JTextField CCCD, JTextField tenNguoiNhan, JTextField soDienThoai) {
         this.canNang = canNang;                 // ex7
         this.datDonButton = datDonButton;
         this.diaChiGui = diaChiGui;             // ex2
@@ -32,6 +41,10 @@ public class AddDonHangController {
         this.loaiSanPham = loaiSanPham;         // ex5
         this.tenSanPham = tenSanPham;           // ex6
         this.donHangService = new DonHangServiceImpl();
+        this.nguoiNhanService = new NguoiNhanServiceImpl();
+        this.CCCD = CCCD;
+        this.tenNguoiNhan = tenNguoiNhan;
+        this.soDienThoai = soDienThoai;
         // ngay nhan, ngay giao, tien COD, trang thai gui nhan, maKH.
     }
 
@@ -52,9 +65,14 @@ public class AddDonHangController {
                 donHang.setPhiVanChuyen(Integer.parseInt(giaTien.getText()));
                 donHang.setLoaiHang(loaiSanPham.getText());
                 donHang.setTenSP(tenSanPham.getText());
+                //write code nguoi nhan here :
+                NguoiNhan nguoiNhan = new NguoiNhan();
+                nguoiNhan.setCCCD(Integer.parseInt(CCCD.getText()));
+                nguoiNhan.setTenNN(tenNguoiNhan.getText());
+                nguoiNhan.setSDT(Integer.parseInt(soDienThoai.getText()));
+                nguoiNhan.setDiahChiNhanHang(diaChiNhan.getText());
                 donHangService.addDonHang(donHang);
-                //write load jpanel view here :
-
+                nguoiNhanService.addNguoiNhan(nguoiNhan);
             }
         });
     }

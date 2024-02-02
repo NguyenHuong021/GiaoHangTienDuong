@@ -13,7 +13,7 @@ public class OrderJPanel extends javax.swing.JPanel {
      */
     public OrderJPanel() {
         initComponents();
-        AddDonHangController addDonHangController = new AddDonHangController(canNang, datDonButton, diaChiGui, diaChiNhan, giaTien, loaiSanPham, tenSanPham);
+        AddDonHangController addDonHangController = new AddDonHangController(canNang, datDonButton, diaChiGui, diaChiNhan, giaTien, loaiSanPham, tenSanPham, CCCD, tenNguoiNhan, soDienThoai);
         addDonHangController.addDonHang();
     }
 
@@ -43,11 +43,11 @@ public class OrderJPanel extends javax.swing.JPanel {
         lbCanNang = new javax.swing.JLabel();
         lbYeuCauDacBiet = new javax.swing.JLabel();
         lbYeuCauDacBiet1 = new javax.swing.JLabel();
-        tenSanPham1 = new javax.swing.JTextField();
+        tenNguoiNhan = new javax.swing.JTextField();
         lbYeuCauDacBiet2 = new javax.swing.JLabel();
-        tenSanPham2 = new javax.swing.JTextField();
+        soDienThoai = new javax.swing.JTextField();
         lbYeuCauDacBiet3 = new javax.swing.JLabel();
-        tenSanPham3 = new javax.swing.JTextField();
+        CCCD = new javax.swing.JTextField();
         jScrollPaneText = new javax.swing.JScrollPane();
         yeuCauDacBiet = new javax.swing.JTextArea();
 
@@ -126,27 +126,27 @@ public class OrderJPanel extends javax.swing.JPanel {
         lbYeuCauDacBiet1.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         lbYeuCauDacBiet1.setText("Tên người nhận");
 
-        tenSanPham1.addActionListener(new java.awt.event.ActionListener() {
+        tenNguoiNhan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tenSanPham1ActionPerformed(evt);
+                tenNguoiNhanActionPerformed(evt);
             }
         });
 
         lbYeuCauDacBiet2.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         lbYeuCauDacBiet2.setText("Số điện thoại");
 
-        tenSanPham2.addActionListener(new java.awt.event.ActionListener() {
+        soDienThoai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tenSanPham2ActionPerformed(evt);
+                soDienThoaiActionPerformed(evt);
             }
         });
 
         lbYeuCauDacBiet3.setFont(new java.awt.Font("Montserrat Medium", 0, 18)); // NOI18N
         lbYeuCauDacBiet3.setText("CCCD người nhận");
 
-        tenSanPham3.addActionListener(new java.awt.event.ActionListener() {
+        CCCD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tenSanPham3ActionPerformed(evt);
+                CCCDActionPerformed(evt);
             }
         });
 
@@ -185,9 +185,9 @@ public class OrderJPanel extends javax.swing.JPanel {
                                         .addComponent(lbTenSP)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(tenSanPham1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tenNguoiNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(tenSanPham, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tenSanPham2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(soDienThoai, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(90, 90, 90)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -210,7 +210,7 @@ public class OrderJPanel extends javax.swing.JPanel {
                                         .addComponent(lbYeuCauDacBiet3))
                                     .addComponent(lbYeuCauDacBiet2, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(18, 18, 18)
-                                .addComponent(tenSanPham3, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(58, 58, 58))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -249,13 +249,13 @@ public class OrderJPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbYeuCauDacBiet1)
-                    .addComponent(tenSanPham1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tenNguoiNhan, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbYeuCauDacBiet3)
-                    .addComponent(tenSanPham3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbYeuCauDacBiet2)
-                    .addComponent(tenSanPham2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(soDienThoai, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(datDonButton)
                 .addGap(40, 40, 40))
@@ -301,20 +301,21 @@ public class OrderJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_canNangActionPerformed
 
-    private void tenSanPham1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenSanPham1ActionPerformed
+    private void tenNguoiNhanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenNguoiNhanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tenSanPham1ActionPerformed
+    }//GEN-LAST:event_tenNguoiNhanActionPerformed
 
-    private void tenSanPham2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenSanPham2ActionPerformed
+    private void soDienThoaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soDienThoaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tenSanPham2ActionPerformed
+    }//GEN-LAST:event_soDienThoaiActionPerformed
 
-    private void tenSanPham3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenSanPham3ActionPerformed
+    private void CCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCCDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tenSanPham3ActionPerformed
+    }//GEN-LAST:event_CCCDActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CCCD;
     private javax.swing.JTextField canNang;
     private javax.swing.JButton datDonButton;
     private javax.swing.JTextField diaChiGui;
@@ -334,10 +335,9 @@ public class OrderJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lbYeuCauDacBiet2;
     private javax.swing.JLabel lbYeuCauDacBiet3;
     private javax.swing.JTextField loaiSanPham;
+    private javax.swing.JTextField soDienThoai;
+    private javax.swing.JTextField tenNguoiNhan;
     private javax.swing.JTextField tenSanPham;
-    private javax.swing.JTextField tenSanPham1;
-    private javax.swing.JTextField tenSanPham2;
-    private javax.swing.JTextField tenSanPham3;
     private javax.swing.JTextArea yeuCauDacBiet;
     // End of variables declaration//GEN-END:variables
 }
