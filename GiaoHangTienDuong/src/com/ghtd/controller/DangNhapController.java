@@ -44,10 +44,20 @@ public class DangNhapController {
                         if (taiKhoan == null) {
                             jlbMsg.setText("Tên đăng nhập và mật khẩu không đúng!");
                         } else{
-                            // Gọi hàm để thông báo cho Main rằng đăng nhập đã thành công :
-                            TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
-                            System.out.println(taiKhoan.getMaND());
-                            notifyLoginSuccess();
+                            System.out.println("loại nguời dùng : " + taiKhoan.getLoaiND());
+                            // Khách hàng thì sẽ để là KH, Shippper thì sẽ để là GH
+                            if(taiKhoan.getLoaiND().equals("KH")){
+                                // Gọi hàm để thông báo cho Main rằng đăng nhập đã thành công :
+                                System.out.println("hehe");
+                                TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
+                                System.out.println(taiKhoan.getMaND());
+                                notifyLoginSuccess();
+                            }
+                            if(taiKhoan.getLoaiND().equals("GH")){
+                                TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
+                                System.out.println(taiKhoan.getMaND());
+                                notifyShipperLoginSuccess();
+                            }
                         }
                     }
                     // Đóng cửa sổ đăng nhập
@@ -70,5 +80,9 @@ public class DangNhapController {
     private void notifyLoginSuccess() {
         // Gọi phương thức static trong Main để thông báo đăng nhập thành công
         Main.handleLoginSuccess();
+    }
+
+    private void notifyShipperLoginSuccess(){
+        Main.handleLoginShipper();
     }
 }

@@ -1,6 +1,7 @@
 package com.ghtd.main;
 
 import com.ghtd.view.LoginJPanel;
+import com.ghtd.view.MainJFrameGiaoHang;
 import com.ghtd.view.MainJFrameKhachHang;
 import static com.ghtd.dao.DBConnect.getConnection;
 
@@ -26,5 +27,12 @@ public class Main {
         MainJFrameKhachHang mainFrame = new MainJFrameKhachHang();
         loginJPanel.setVisible(false);
         mainFrame.setVisible(true);
+    }
+
+    public static void handleLoginShipper(){
+        System.out.println("Handling login shipper");
+        MainJFrameGiaoHang mainJFrameShipper = new MainJFrameGiaoHang();
+        loginJPanel.setVisible(false);
+        mainJFrameShipper.setVisible(true);
     }
 }
