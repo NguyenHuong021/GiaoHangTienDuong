@@ -1,7 +1,7 @@
 package com.ghtd.view;
 
 import com.ghtd.bean.DanhMucBean;
-import com.ghtd.controller.ChuyenManHinhController;
+import com.ghtd.controller.ChuyenManHinhControllerGiaoHang;
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -20,10 +20,10 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
         
         List<DanhMucBean> listItem = new ArrayList<>();
         listItem.add(new DanhMucBean("AccountInfo", jPanelAccountInfo, jLabelAccountInfo));
-        listItem.add(new DanhMucBean("Order", jPanelOrder, jLabelOrder));
+        listItem.add(new DanhMucBean("Order", jPanelGetOrder, jLabelGetOrder));
         listItem.add(new DanhMucBean("AllOrder", jPanelAllOrder, jLabelAllOrder));
         
-        ChuyenManHinhController controller = new ChuyenManHinhController(jPanelView);
+        ChuyenManHinhControllerGiaoHang controller = new ChuyenManHinhControllerGiaoHang(jPanelView);
         controller.setView(jPanelAccountInfo, jLabelAccountInfo);
         controller.setEvent(listItem);
     }
@@ -43,8 +43,8 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
         jLabelHome = new javax.swing.JLabel();
         jPanelAccountInfo = new javax.swing.JPanel();
         jLabelAccountInfo = new javax.swing.JLabel();
-        jPanelOrder = new javax.swing.JPanel();
-        jLabelOrder = new javax.swing.JLabel();
+        jPanelGetOrder = new javax.swing.JPanel();
+        jLabelGetOrder = new javax.swing.JLabel();
         jPanelAllOrder = new javax.swing.JPanel();
         jLabelAllOrder = new javax.swing.JLabel();
         jButtonLogOut = new javax.swing.JButton();
@@ -105,28 +105,28 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
         );
 
-        jPanelOrder.setBackground(new java.awt.Color(255, 102, 102));
-        jPanelOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
+        jPanelGetOrder.setBackground(new java.awt.Color(255, 102, 102));
+        jPanelGetOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(249, 246, 244), 5));
 
-        jLabelOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
-        jLabelOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/cart.png"))); // NOI18N
-        jLabelOrder.setText("CHỌN ĐƠN GIAO HÀNG");
+        jLabelGetOrder.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        jLabelGetOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/ghtd/images/getorder.png"))); // NOI18N
+        jLabelGetOrder.setText("CHỌN ĐƠN GIAO HÀNG");
 
-        javax.swing.GroupLayout jPanelOrderLayout = new javax.swing.GroupLayout(jPanelOrder);
-        jPanelOrder.setLayout(jPanelOrderLayout);
-        jPanelOrderLayout.setHorizontalGroup(
-            jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOrderLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelGetOrderLayout = new javax.swing.GroupLayout(jPanelGetOrder);
+        jPanelGetOrder.setLayout(jPanelGetOrderLayout);
+        jPanelGetOrderLayout.setHorizontalGroup(
+            jPanelGetOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGetOrderLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelOrder)
-                .addGap(39, 39, 39))
+                .addComponent(jLabelGetOrder)
+                .addGap(40, 40, 40))
         );
-        jPanelOrderLayout.setVerticalGroup(
-            jPanelOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelOrderLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabelOrder)
-                .addContainerGap(32, Short.MAX_VALUE))
+        jPanelGetOrderLayout.setVerticalGroup(
+            jPanelGetOrderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGetOrderLayout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jLabelGetOrder)
+                .addGap(30, 30, 30))
         );
 
         jPanelAllOrder.setBackground(new java.awt.Color(255, 102, 102));
@@ -168,7 +168,7 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanelAccountInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelGetOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelAllOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOptionsLayout.createSequentialGroup()
@@ -183,7 +183,7 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelAccountInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelGetOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanelAllOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -238,14 +238,14 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
     private javax.swing.JButton jButtonLogOut;
     private javax.swing.JLabel jLabelAccountInfo;
     private javax.swing.JLabel jLabelAllOrder;
+    private javax.swing.JLabel jLabelGetOrder;
     private javax.swing.JLabel jLabelHome;
-    private javax.swing.JLabel jLabelOrder;
     private javax.swing.JPanel jPanelAccountInfo;
     private javax.swing.JPanel jPanelAll;
     private javax.swing.JPanel jPanelAllOrder;
+    private javax.swing.JPanel jPanelGetOrder;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelOptions;
-    private javax.swing.JPanel jPanelOrder;
     private javax.swing.JPanel jPanelView;
     // End of variables declaration//GEN-END:variables
 }
