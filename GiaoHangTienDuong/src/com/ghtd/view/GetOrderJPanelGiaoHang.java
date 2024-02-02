@@ -1,6 +1,7 @@
 package com.ghtd.view;
 
 import com.ghtd.controller.AddDonHangControllerKhachHang;
+import com.ghtd.controller.DonHangChuaNhanController;
 
 /**
  *
@@ -13,6 +14,8 @@ public class GetOrderJPanelGiaoHang extends javax.swing.JPanel {
      */
     public GetOrderJPanelGiaoHang() {
         initComponents();
+        DonHangChuaNhanController donHangChuaNhanController = new DonHangChuaNhanController(jPanel1);
+        donHangChuaNhanController.taoBang(jPanel1);
     }
 
     /**

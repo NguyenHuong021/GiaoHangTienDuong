@@ -3,6 +3,8 @@ package com.ghtd.controller;
 import com.ghtd.common.TaiKhoanSingleton;
 import com.ghtd.model.KhachHang;
 import com.ghtd.model.TaiKhoan;
+import com.ghtd.service.KhachHangService;
+import com.ghtd.service.KhachHangServiceImpl;
 import com.ghtd.service.NguoiDungService;
 import com.ghtd.service.NguoiDungServiceImpl;
 
@@ -12,6 +14,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Date;
 import java.time.format.DateTimeFormatter;
 import javax.swing.*;
 
@@ -26,13 +29,21 @@ public class ThongTinKhachHangPanelController {
     private JTextField CCCD;
     private JTextField diaChiGuiHang;
     private NguoiDungService nguoiDungService = null;
+    private KhachHangService khachHangService = null;
     public ThongTinKhachHangPanelController(JButton editButton, JButton deleteButton,
                                             JTextField maKhachHang, JTextField ngaySinh,
                                             JTextField soDienThoai, JTextField tenKhachHang,
                                             JTextField CCCD, JTextField diaChiGuiHang) {
         this.editButton = editButton;
         this.deleteButton = deleteButton;
+        this.maKhachHang = maKhachHang;
+        this.ngaySinh = ngaySinh;
+        this.soDienThoai = soDienThoai;
+        this.tenKhachHang = tenKhachHang;
+        this.CCCD = CCCD;
+        this.diaChiGuiHang = diaChiGuiHang;
         this.nguoiDungService = new NguoiDungServiceImpl();
+        this.khachHangService = new KhachHangServiceImpl();
     }
     public void thongTinKhachHang(JTextField maKhachHang, JTextField ngaySinh,
                                   JTextField soDienThoai, JTextField tenKhachHang,
@@ -57,7 +68,10 @@ public class ThongTinKhachHangPanelController {
         diaChiGuiHang.setText(khachHang.getDiaChiGuiHang());
         diaChiGuiHang.setEditable(false);
     }
-    public void popUpEditer(JButton editButton) {
+    public void popUpEditer(JButton editButton,
+                            JTextField maKhachHang, JTextField ngaySinh,
+                            JTextField soDienThoai, JTextField tenKhachHang,
+                            JTextField CCCD, JTextField diaChiGuiHang) {
         TaiKhoan taiKhoan = TaiKhoanSingleton.getInstance().getTaiKhoan();
         editButton.addMouseListener(new MouseAdapter(){
             @Override
@@ -69,7 +83,7 @@ public class ThongTinKhachHangPanelController {
                 JTextField diaChiGuiHangField = new JTextField();
                 JTextField ngaySinhField = new JTextField();
 
-                maKhachHangField.setText("MaKH00");
+                maKhachHangField.setText(String.valueOf(taiKhoan.getMaND()));
                 maKhachHangField.setEditable(false);
 
                 JPanel popupEdit = new JPanel();
@@ -144,7 +158,35 @@ public class ThongTinKhachHangPanelController {
                 diaChiGuiHangField.setPreferredSize(new Dimension(200, 40));
                 popupEdit.add(diaChiGuiHangField, gbc);
 
-                JOptionPane.showConfirmDialog(null, popupEdit, "Nhập thông tin mới", JOptionPane.OK_CANCEL_OPTION);
+                int result = JOptionPane.showConfirmDialog(null, popupEdit, "Nhập thông tin mới", JOptionPane.OK_CANCEL_OPTION);
+                if(result == JOptionPane.OK_OPTION){
+                    KhachHang khachHang = new KhachHang();
+                    khachHang.setMaKH(taiKhoan.getMaND());
+                    khachHang.setTenKH(tenField.getText());
+                    khachHang.setSDT(Integer.parseInt(sdtField.getText()));
+                    khachHang.setCCCD(Integer.parseInt(cccdField.getText()));
+                    khachHang.setDiaChiGuiHang(diaChiGuiHangField.getText());
+                    khachHang.setNgayThangNamSinh(Date.valueOf(ngaySinhField.getText()));
+                    khachHangService.updateKhachHang(khachHang);
+                    //thongTinKhachHang(khachHang.);
+                    maKhachHang.setText(String.valueOf(khachHang.getMaKH()));
+                    maKhachHang.setEditable(false);
+
+                    ngaySinh.setText(khachHang.getNgayThangNamSinh().toString());
+                    ngaySinh.setEditable(false);
+
+                    soDienThoai.setText(String.valueOf(khachHang.getSDT()));
+                    soDienThoai.setEditable(false);
+
+                    tenKhachHang.setText(khachHang.getTenKH());
+                    tenKhachHang.setEditable(false);
+
+                    CCCD.setText(String.valueOf(khachHang.getCCCD()));
+                    CCCD.setEditable(false);
+
+                    diaChiGuiHang.setText(khachHang.getDiaChiGuiHang());
+                    diaChiGuiHang.setEditable(false);
+                }
             }
         });
     }

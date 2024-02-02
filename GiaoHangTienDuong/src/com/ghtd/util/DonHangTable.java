@@ -2,6 +2,7 @@ package com.ghtd.util;
 
 import com.ghtd.model.DonHang;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class DonHangTable {
             obj[3] = donHang.getTenSP();
             obj[4] = donHang.getPhiVanChuyen();
             obj[5] = donHang.getTrangThaiGuiNhan();
+            //obj[5] = new JButton("xin chao");
             dtm.addRow(obj);
         }
         return dtm;
