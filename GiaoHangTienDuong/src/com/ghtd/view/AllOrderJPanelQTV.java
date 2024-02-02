@@ -4,12 +4,12 @@ package com.ghtd.view;
  *
  * @author Asus
  */
-public class AllOrderJPanelGiaoHang extends javax.swing.JPanel {
+public class AllOrderJPanelQTV extends javax.swing.JPanel {
 
     /**
      * Creates new form AllOrderJPanel
      */
-    public AllOrderJPanelGiaoHang() {
+    public AllOrderJPanelQTV() {
         initComponents();
         
     }

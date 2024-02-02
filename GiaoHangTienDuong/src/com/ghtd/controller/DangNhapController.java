@@ -48,15 +48,22 @@ public class DangNhapController {
                             // Khách hàng thì sẽ để là KH, Shippper thì sẽ để là GH
                             if(taiKhoan.getLoaiND().equals("KH")){
                                 // Gọi hàm để thông báo cho Main rằng đăng nhập đã thành công :
-                                System.out.println("hehe");
+                                System.out.println("KH");
                                 TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
                                 System.out.println(taiKhoan.getMaND());
                                 notifyLoginSuccess();
                             }
                             if(taiKhoan.getLoaiND().equals("GH")){
+                                System.out.println("GH");
                                 TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
                                 System.out.println(taiKhoan.getMaND());
                                 notifyShipperLoginSuccess();
+                            }
+                            if(taiKhoan.getLoaiND().equals("QTV")){
+                                System.out.println("QTV");
+                                TaiKhoanSingleton.getInstance().setTaiKhoan(taiKhoan);
+                                System.out.println(taiKhoan.getMaND());
+                                notifyQTVLoginSuccess();
                             }
                         }
                     }
@@ -84,5 +91,9 @@ public class DangNhapController {
 
     private void notifyShipperLoginSuccess(){
         Main.handleLoginShipper();
+    }
+    
+    private void notifyQTVLoginSuccess() {
+        Main.handleLoginQTV();
     }
 }

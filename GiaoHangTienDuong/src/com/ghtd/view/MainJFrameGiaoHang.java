@@ -24,7 +24,7 @@ public class MainJFrameGiaoHang extends javax.swing.JFrame {
         listItem.add(new DanhMucBean("AllOrderGiaoHang", jPanelAllOrder, jLabelAllOrder));
         
         ChuyenManHinhControllerGiaoHang controller = new ChuyenManHinhControllerGiaoHang(jPanelView);
-        controller.setView(jPanelAccountInfo, jLabelAccountInfo);
+        controller.setView(jPanelGetOrder, jLabelGetOrder);
         controller.setEvent(listItem);
     }
 
